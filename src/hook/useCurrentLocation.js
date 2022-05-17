@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react"
 
-function useCurrentLocation() {
+function useCurrentLocation(callback) {
 
     const [myLocation, setMyLocation] = useState({})
 
     function success(position) {
         const { latitude, longitude } = position.coords
-
         setMyLocation({ latitude, longitude })
+        callback(null, { latitude, longitude })
     }
 
     function error(error) {
-        alert(`ERROR(${error.code}): ${error.message}`);
+        console.log(error)
+        callback(error)
     };
 
     useEffect(() => { navigator.geolocation.getCurrentPosition(success, error) }, [])
