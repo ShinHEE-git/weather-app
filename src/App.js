@@ -16,8 +16,10 @@ import Setting from './pages/setting';
 
 
 function App() {
+    const [data, setData] = useState()
+    console.log(data)
     useCurrentLocation((error, result) => {
-        if (result) { getApi(result) }
+        if (result) { getApi(result, setData) }
     })
 
     const menuList = [
@@ -25,6 +27,7 @@ function App() {
         { icon: <Chart />, link: "/weather-forcast", name: "날씨 예보" },
         { icon: <Sliders />, link: "/setting", name: "setting" }]
     return (
+
         <div className="App">
 
             <header>
