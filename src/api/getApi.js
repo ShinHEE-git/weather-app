@@ -1,3 +1,4 @@
+import { keyboard } from "@testing-library/user-event/dist/keyboard";
 import axios from "axios";
 
 
@@ -10,6 +11,7 @@ function getAxios(url, lat, lon) {
         params: {
             lat,
             lon,
+            units: "metric",
             appid: "066ec22e4f51a88fc576747e6e3d72c7"
         }
     }).then((response) => {
