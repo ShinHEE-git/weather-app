@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 30px 20px;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem grey;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+input {
+    background: none;
+    border: none;
+}
+
+/* *********************************** */
+.temp-box {
+    display: flex;
+    align-items: center;
+}
+
+.temp {
+    font-size: 5rem;
+}
+
+.temp-sign {
+    font-size: 2rem;
+    padding: 0;
+}
+
+.temp-button {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.weather-box {
+    display: flex;
+}
+
+.weather-icon {
+    width: 7rem;
+}
+
+/* *********************************** */
+
+article {
+    padding: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+}
+
+section p {
+    font-size: 1.5rem;
+}
+
+
+/* *********************************** */

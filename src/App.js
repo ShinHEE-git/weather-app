@@ -28,26 +28,26 @@ function App() {
         { icon: <Chart />, link: "/weather-forcast", name: "날씨 예보" },
         { icon: <Sliders />, link: "/setting", name: "setting" }]
     if (isLoading) {
-        return <h1>loading</h1>
+        return <h1>로딩중</h1>
     } else {
         return (
 
             <div className="App">
 
-                <header>
-                    <nav className="menu-bar closs">
-                        <img src={imageSun} />
-                        <ul>
-                            {menuList.map((obj, i) => (
-                                <li key={i}>
-                                    <Link to={obj.link} className="menu-listitem">
-                                        <i className="icon">{obj.icon}</i>
-                                        <p className="menu-list-text">{obj.name}</p>
-                                    </Link>
-                                </li>))}
-                        </ul>
-                    </nav>
-                </header>
+
+                <nav className="menu-bar closs">
+                    <img src={imageSun} />
+                    <ul>
+                        {menuList.map((obj, i) => (
+                            <li key={i}>
+                                <Link to={obj.link} className="menu-listitem">
+                                    <i className="icon">{obj.icon}</i>
+                                    <p className="menu-list-text">{obj.name}</p>
+                                </Link>
+                            </li>))}
+                    </ul>
+                </nav>
+
 
                 <Routes>
                     <Route path={menuList[0].link} element={<WeatherNow data={data[0]} />} />
